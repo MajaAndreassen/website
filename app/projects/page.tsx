@@ -44,7 +44,7 @@ export default function Projects() {
               
               {project.tech && (
                 <div className="flex flex-wrap gap-2 mb-3">
-                  {project.tech.map((tech: string) => (
+                  {(Array.isArray(project.tech) ? project.tech : [project.tech]).map((tech: string) => (
                     <span key={tech} className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">
                       {tech}
                     </span>

@@ -18,7 +18,7 @@ export default function About() {
         </p>
         
         <p>
-          I believe in building things that matter, exploring creativity through art,
+          I believe in learning through curiosity, exploring creativity through art,
           and documenting the journey along the way. This site is a collection of those
           experiences and experiments.
         </p>
@@ -39,14 +39,8 @@ export default function About() {
         </p>
         
         <div className="flex gap-4 text-sm">
-          <a href="mailto:your@email.com" className="text-blue-600 hover:underline">
+          <a href="mailto:andreassenmajaa@gmail.com" className="text-blue-600 hover:underline">
             Email
-          </a>
-          <a href="https://twitter.com/yourusername" className="text-blue-600 hover:underline">
-            Twitter
-          </a>
-          <a href="https://github.com/yourusername" className="text-blue-600 hover:underline">
-            GitHub
           </a>
         </div>
       </div>

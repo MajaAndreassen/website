@@ -13,7 +13,7 @@ export default function Layout({ children }: LayoutProps) {
         
         <footer className="mt-16 pt-8 border-t border-gray-200">
           <p className="text-sm text-gray-500">
-            © {new Date().getFullYear()} Maja A. Moger • Built with Next.js
+            © {new Date().getFullYear()} Maja A. Moger
           </p>
         </footer>
       </div>

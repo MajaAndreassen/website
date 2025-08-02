@@ -4,6 +4,27 @@ import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
 
+export interface Drawing {
+  slug: string;
+  title: string;
+  date: string;
+  image: string;
+  medium?: string;
+  description: string;
+}
+
+export interface Project {
+  slug: string;
+  title: string;
+  date: string;
+  excerpt?: string;
+  status?: 'active' | 'completed' | 'on-hold';
+  tech: string | string[];
+  github?: string;
+  demo?: string;
+  description: string;
+}
+
 const postsDirectory = path.join(process.cwd(), 'content');
 
 export function getPostSlugs(category: string) {
@@ -46,7 +67,7 @@ export function getAllPosts(category: string) {
   return posts;
 }
 
-export function getDrawings() {
+export function getDrawings(): Drawing[] {
   const drawingsPath = path.join(postsDirectory, 'drawings');
   if (!fs.existsSync(drawingsPath)) {
     return [];
@@ -59,11 +80,11 @@ export function getDrawings() {
       slug: file.replace(/\.md$/, ''),
       ...data,
       description: content,
-    };
+    } as Drawing;
   }).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
-export function getProjects() {
+export function getProjects(): Project[] {
   const projectsPath = path.join(postsDirectory, 'projects');
   if (!fs.existsSync(projectsPath)) {
     return [];
@@ -76,6 +97,6 @@ export function getProjects() {
       slug: file.replace(/\.md$/, ''),
       ...data,
       description: content,
-    };
+    } as Project;
   }).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
