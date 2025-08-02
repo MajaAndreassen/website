@@ -12,7 +12,7 @@ export default function About() {
       
       <div className="space-y-6 text-gray-700 leading-relaxed">
         <p>
-          Hi, I'm Maja A. Moger. This is my personal space on the internet where I share
+          Hi, I'm Maja Moger. This is my personal space on the internet where I share
           projects I'm working on, drawings I create, random thoughts, product reviews,
           and stories from my travels.
         </p>
