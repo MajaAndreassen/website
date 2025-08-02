@@ -28,6 +28,7 @@ export default function Drawings() {
               date={drawing.date}
               description={drawing.description}
               medium={drawing.medium}
+              slug={drawing.slug}
             />
           ))}
         </div>
