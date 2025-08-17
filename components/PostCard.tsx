@@ -9,25 +9,19 @@ interface PostCardProps {
   category: 'micro' | 'tried-tested' | 'travel';
 }
 
-const categoryColors = {
-  micro: 'bg-blue-50 text-blue-700 border-blue-200',
-  'tried-tested': 'bg-green-50 text-green-700 border-green-200',
-  travel: 'bg-purple-50 text-purple-700 border-purple-200',
-};
-
 export default function PostCard({ title, date, excerpt, href, category }: PostCardProps) {
   return (
-    <article className={`border rounded-lg p-6 hover:shadow-md transition-shadow duration-200 ${categoryColors[category]}`}>
+    <article className="rounded-lg p-6 hover:shadow-md transition-shadow duration-200 bg-white">
       <div className="flex items-center justify-between mb-2">
-        <time className="text-sm opacity-70">{formatDate(date)}</time>
+        <time className="text-sm text-gray-600">{formatDate(date)}</time>
       </div>
       
       <Link href={href} className="group">
-        <h3 className="text-lg font-medium mb-2 group-hover:underline">
+        <h3 className="text-lg font-medium mb-2 group-hover:underline text-gray-900">
           {title}
         </h3>
         {excerpt && (
-          <p className="text-sm opacity-80 line-clamp-2">
+          <p className="text-sm text-gray-600 line-clamp-2">
             {excerpt}
           </p>
         )}
