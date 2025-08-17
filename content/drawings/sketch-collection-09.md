@@ -1,6 +1,6 @@
 ---
 title: "Quiet Horizon"
-date: "2025-08-17"
+date: "2025-08-08"
 image: "/images/drawings/sketch-collection-09.jpg"
 medium: "Pencil and paper"
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Twin Wings #3"
-date: "2025-08-17"
+date: "2025-08-16"
 image: "/images/drawings/sketch-collection-06.jpg"
 medium: "Pencil and paper"
 ---

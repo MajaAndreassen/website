@@ -1,6 +1,6 @@
 ---
 title: "The Lamp of Imagination"
-date: "2025-08-17"
+date: "2025-08-10"
 image: "/images/drawings/sketch-collection-01.jpg"
 medium: "Pencil and paper"
 ---

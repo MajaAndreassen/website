@@ -1,6 +1,6 @@
 ---
 title: "Hills"
-date: "2025-08-17"
+date: "2025-08-13"
 image: "/images/drawings/sketch-collection-03.jpg"
 medium: "Pencil and paper"
 ---

@@ -5,7 +5,7 @@ excerpt: "Transforming a village shop into a seaside cabin in Rotsund, Northern 
 status: "active"
 tech: ["Architecture", "Renovation", "Tourism", "Web Development"]
 website: "https://lyngenseaside.com"
-demo: "https://lyngenseaside.no"
+demo: "https://lyngenseaside.com"
 ---
 
 In 2023, my husband Fredrik and I bought the old local village shop in my home village Rotsund, embarking on an ambitious project to transform it into something special for our family and community.
