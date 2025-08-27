@@ -3,8 +3,17 @@ import { getAllPosts } from '@/lib/markdown';
 import PostCard from '@/components/PostCard';
 
 export const metadata: Metadata = {
-  title: 'Micro - Maja A. Moger',
-  description: 'Quick thoughts, experiments, and observations.',
+  title: 'Micro Posts & Quick Thoughts',
+  description: 'Quick thoughts, experiments, and observations that don&apos;t quite fit elsewhere. Short-form content about technology, creativity, and daily discoveries.',
+  keywords: ['micro posts', 'thoughts', 'observations', 'experiments', 'short form content', 'blog', 'quick notes'],
+  openGraph: {
+    title: 'Micro Posts & Quick Thoughts | Maja A. Moger',
+    description: 'Quick thoughts, experiments, and observations that don&apos;t quite fit elsewhere.',
+    type: 'website',
+  },
+  alternates: {
+    canonical: 'https://maja-moger.com/micro',
+  },
 };
 
 export default function Micro() {
@@ -15,7 +24,7 @@ export default function Micro() {
       <h1 className="text-3xl font-bold mb-8">Micro</h1>
       
       <p className="text-gray-600 mb-8">
-        Quick thoughts, experiments, and observations that don't quite fit elsewhere.
+        Quick thoughts, experiments, and observations that don&apos;t quite fit elsewhere.
       </p>
       
       {posts.length > 0 ? (

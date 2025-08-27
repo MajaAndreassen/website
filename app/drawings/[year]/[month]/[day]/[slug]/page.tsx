@@ -39,9 +39,47 @@ export async function generateMetadata({ params }: DrawingPageProps): Promise<Me
     };
   }
 
+  const date = new Date(drawing.date);
+  const year = date.getFullYear();
+  const month = (date.getMonth() + 1).toString().padStart(2, '0');
+  const day = date.getDate().toString().padStart(2, '0');
+  const canonicalUrl = `https://maja-moger.com/drawings/${year}/${month}/${day}/${drawing.slug}`;
+
   return {
-    title: `${drawing.title} - Drawings - Maja A. Moger`,
-    description: drawing.description.substring(0, 160),
+    title: `${drawing.title}`,
+    description: drawing.description.length > 160 
+      ? drawing.description.substring(0, 157) + '...'
+      : drawing.description,
+    keywords: ['drawing', 'sketch', 'art', 'visual art', drawing.medium, 'Maja Moger'].filter((k): k is string => Boolean(k)),
+    authors: [{ name: 'Maja A. Moger' }],
+    openGraph: {
+      title: `${drawing.title} | Drawings | Maja A. Moger`,
+      description: drawing.description.length > 160 
+        ? drawing.description.substring(0, 157) + '...'
+        : drawing.description,
+      type: 'article',
+      publishedTime: drawing.date,
+      authors: ['Maja A. Moger'],
+      images: [
+        {
+          url: drawing.image,
+          width: 800,
+          height: 600,
+          alt: drawing.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${drawing.title} | Drawings | Maja A. Moger`,
+      description: drawing.description.length > 160 
+        ? drawing.description.substring(0, 157) + '...'
+        : drawing.description,
+      images: [drawing.image],
+    },
+    alternates: {
+      canonical: canonicalUrl,
+    },
   };
 }
 
@@ -72,8 +110,35 @@ export default async function DrawingPage({ params }: DrawingPageProps) {
 
   const contentHtml = await markdownToHtml(drawing.description);
 
+  const date = new Date(drawing.date);
+  const year = date.getFullYear();
+  const month = (date.getMonth() + 1).toString().padStart(2, '0');
+  const day = date.getDate().toString().padStart(2, '0');
+  const canonicalUrl = `https://maja-moger.com/drawings/${year}/${month}/${day}/${drawing.slug}`;
+
+  // Structured data for SEO
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'VisualArtwork',
+    name: drawing.title,
+    description: drawing.description,
+    image: drawing.image,
+    creator: {
+      '@type': 'Person',
+      name: 'Maja A. Moger',
+    },
+    dateCreated: drawing.date,
+    medium: drawing.medium,
+    url: canonicalUrl,
+  };
+
   return (
-    <div className="max-w-3xl mx-auto">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <div className="max-w-3xl mx-auto">
       <div className="mb-6">
         <Link 
           href="/drawings" 
@@ -109,6 +174,7 @@ export default async function DrawingPage({ params }: DrawingPageProps) {
           dangerouslySetInnerHTML={{ __html: contentHtml }}
         />
       )}
-    </div>
+      </div>
+    </>
   );
 }

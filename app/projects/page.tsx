@@ -4,8 +4,25 @@ import { getProjects } from '@/lib/markdown';
 import { formatDate } from '@/lib/date-utils';
 
 export const metadata: Metadata = {
-  title: 'Projects - Maja A. Moger',
-  description: 'A collection of projects and things I\'ve built.',
+  title: 'Projects & Work',
+  description: 'A collection of bigger projects and things I&apos;ve built or am working on. Featuring development projects, creative work, and technical experiments.',
+  keywords: ['projects', 'development', 'web development', 'creative projects', 'portfolio', 'software', 'programming'],
+  openGraph: {
+    title: 'Projects & Work | Maja A. Moger',
+    description: 'A collection of bigger projects and things I&apos;ve built or am working on.',
+    type: 'website',
+    images: [
+      {
+        url: '/images/projects-og.jpg', // You might want to create this
+        width: 1200,
+        height: 630,
+        alt: 'Maja A. Moger - Projects Collection',
+      },
+    ],
+  },
+  alternates: {
+    canonical: 'https://maja-moger.com/projects',
+  },
 };
 
 export default function Projects() {

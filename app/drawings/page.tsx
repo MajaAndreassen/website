@@ -3,8 +3,25 @@ import { getDrawings } from '@/lib/markdown';
 import DrawingCard from '@/components/DrawingCard';
 
 export const metadata: Metadata = {
-  title: 'Drawings - Maja A. Moger',
-  description: 'A collection of drawings and visual explorations.',
+  title: 'Drawings & Visual Art',
+  description: 'A collection of drawings, sketches, and visual explorations by Maja A. Moger. Featuring pencil drawings, artistic experiments, and creative visual studies.',
+  keywords: ['drawings', 'sketches', 'art', 'visual art', 'pencil drawings', 'artistic exploration', 'creative work'],
+  openGraph: {
+    title: 'Drawings & Visual Art | Maja A. Moger',
+    description: 'A collection of drawings, sketches, and visual explorations by Maja A. Moger.',
+    type: 'website',
+    images: [
+      {
+        url: '/images/drawings-og.jpg', // You might want to create this
+        width: 1200,
+        height: 630,
+        alt: 'Maja A. Moger - Drawings Collection',
+      },
+    ],
+  },
+  alternates: {
+    canonical: 'https://maja-moger.com/drawings',
+  },
 };
 
 export default function Drawings() {

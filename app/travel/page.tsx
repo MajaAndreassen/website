@@ -3,8 +3,17 @@ import { getAllPosts } from '@/lib/markdown';
 import PostCard from '@/components/PostCard';
 
 export const metadata: Metadata = {
-  title: 'Travel - Maja A. Moger',
-  description: 'Stories and photos from places I\'ve been.',
+  title: 'Travel Stories & Adventures',
+  description: 'Stories, photos, and experiences from places I&apos;ve been lucky enough to visit. Travel adventures, cultural discoveries, and journey reflections.',
+  keywords: ['travel', 'travel stories', 'adventures', 'photography', 'culture', 'exploration', 'journey', 'experiences'],
+  openGraph: {
+    title: 'Travel Stories & Adventures | Maja A. Moger',
+    description: 'Stories, photos, and experiences from places I&apos;ve been lucky enough to visit.',
+    type: 'website',
+  },
+  alternates: {
+    canonical: 'https://maja-moger.com/travel',
+  },
 };
 
 export default function Travel() {
@@ -15,7 +24,7 @@ export default function Travel() {
       <h1 className="text-3xl font-bold mb-8">Travel</h1>
       
       <p className="text-gray-600 mb-8">
-        Stories, photos, and experiences from places I've been lucky enough to visit.
+        Stories, photos, and experiences from places I&apos;ve been lucky enough to visit.
       </p>
       
       {posts.length > 0 ? (
