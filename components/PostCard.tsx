@@ -6,7 +6,7 @@ interface PostCardProps {
   date: string;
   excerpt?: string;
   href: string;
-  category: 'micro' | 'tried-tested' | 'travel';
+  category: 'micro' | 'tried-tested' | 'travel' | 'product';
 }
 
 export default function PostCard({ title, date, excerpt, href, category }: PostCardProps) {

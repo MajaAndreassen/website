@@ -22,6 +22,7 @@ export default function About() {
     jobTitle: 'Creative Developer & Artist',
     description: 'Developer, designer, and creative sharing projects, drawings, thoughts, reviews, and travel stories.',
     url: 'https://maja-moger.com',
+    image: 'https://maja-moger.com/images/og-image.jpg',
     sameAs: [
       // Add your social media profiles here when available
       // 'https://twitter.com/yourusername',
@@ -65,7 +66,7 @@ export default function About() {
           <li><strong>Projects</strong> - Bigger things I&apos;m building and working on</li>
           <li><strong>Drawings</strong> - Visual explorations and artistic experiments</li>
           <li><strong>Micro</strong> - Quick thoughts, experiments, and observations</li>
-          <li><strong>Tried & Tested</strong> - Honest reviews of products and services</li>
+          <li><strong>Product</strong> - Reviews of products and services</li>
           <li><strong>Travel</strong> - Stories and photos from places I&apos;ve been</li>
         </ul>
         

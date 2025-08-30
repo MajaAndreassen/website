@@ -9,7 +9,7 @@ export async function GET(): Promise<Response> {
   const projects = getProjects();
   const microPosts = getAllPosts('micro');
   const travelPosts = getAllPosts('travel');
-  const triedTestedPosts = getAllPosts('tried-tested');
+  const productPosts = getAllPosts('product');
 
   // Static pages
   const staticPages = [
@@ -44,7 +44,7 @@ export async function GET(): Promise<Response> {
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/tried-tested`,
+      url: `${baseUrl}/product`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
       priority: 0.7,
@@ -89,8 +89,8 @@ export async function GET(): Promise<Response> {
     priority: 0.6,
   }));
 
-  const triedTestedPages = triedTestedPosts.map((post) => ({
-    url: `${baseUrl}/tried-tested/${post!.slug}`,
+  const productPages = productPosts.map((post) => ({
+    url: `${baseUrl}/product/${post!.slug}`,
     lastModified: new Date(post!.meta.date),
     changeFrequency: 'monthly' as const,
     priority: 0.6,
@@ -102,7 +102,7 @@ export async function GET(): Promise<Response> {
     ...projectPages,
     ...microPages,
     ...travelPages,
-    ...triedTestedPages,
+    ...productPages,
   ];
 
   // Generate XML

@@ -8,10 +8,10 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: {
-    default: 'Maja A. Moger - Personal Blog & Portfolio',
+    default: 'Maja A. Moger - Creative Developer & Artist',
     template: '%s | Maja A. Moger',
   },
-  description: 'Personal blog and portfolio of Maja A. Moger featuring projects, drawings, thoughts, reviews, and travel stories.',
+  description: 'Personal blog and portfolio of Maja A. Moger - developer, designer, and creative. Featuring projects, drawings, thoughts, reviews, and travel stories.',
   keywords: [
     'blog', 
     'portfolio', 
@@ -44,26 +44,29 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://maja-moger.com', // Replace with your actual domain
-    title: 'Maja A. Moger - Personal Blog & Portfolio',
-    description: 'Personal blog and portfolio of Maja A. Moger featuring projects, drawings, thoughts, reviews, and travel stories.',
+    title: 'Maja A. Moger - Creative Developer & Artist',
+    description: 'Personal blog and portfolio of Maja A. Moger - developer, designer, and creative. Featuring projects, drawings, thoughts, reviews, and travel stories.',
     siteName: 'Maja A. Moger',
     images: [
       {
         url: '/images/og-image.jpg', // You'll need to add this image
         width: 1200,
         height: 630,
-        alt: 'Maja A. Moger - Personal Blog & Portfolio',
+        alt: 'Maja A. Moger - Creative Developer & Artist',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Maja A. Moger - Personal Blog & Portfolio',
-    description: 'Personal blog and portfolio of Maja A. Moger featuring projects, drawings, thoughts, reviews, and travel stories.',
+    title: 'Maja A. Moger - Creative Developer & Artist',
+    description: 'Personal blog and portfolio of Maja A. Moger - developer, designer, and creative. Featuring projects, drawings, thoughts, reviews, and travel stories.',
     images: ['/images/og-image.jpg'], // You'll need to add this image
   },
   alternates: {
-    canonical: 'https://maja-moger.com', // Replace with your actual domain
+    canonical: 'https://maja-moger.com',
+  },
+  verification: {
+    google: 'p1ehQmOmLdED36g4YMN1R8iIAw71ryV3afm8i82W5D4',
   },
 };
 

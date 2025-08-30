@@ -19,8 +19,24 @@ export const metadata: Metadata = {
 export default function Micro() {
   const posts = getAllPosts('micro');
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Blog',
+    name: 'Micro Posts & Quick Thoughts',
+    description: 'Quick thoughts, experiments, and observations by Maja A. Moger',
+    url: 'https://maja-moger.com/micro',
+    author: {
+      '@type': 'Person',
+      name: 'Maja A. Moger',
+    },
+  };
+
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <h1 className="text-3xl font-bold mb-8">Micro</h1>
       
       <p className="text-gray-600 mb-8">

@@ -33,7 +33,7 @@ export default function Projects() {
       <h1 className="text-3xl font-bold mb-8">Projects</h1>
       
       <p className="text-gray-600 mb-8">
-        A collection of bigger projects and things I've built or am working on.
+        A collection of bigger projects and things I&apos;ve built or am working on.
       </p>
       
       <div className="space-y-8">

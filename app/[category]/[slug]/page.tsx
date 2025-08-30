@@ -11,7 +11,7 @@ interface Props {
 }
 
 export async function generateStaticParams() {
-  const categories = ['micro', 'tried-tested', 'travel', 'projects'];
+  const categories = ['micro', 'product', 'travel', 'projects'];
   const paths = [];
   
   for (const category of categories) {
