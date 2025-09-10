@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://maja-moger.com/drawings',
+    canonical: 'https://www.majamoger.com/drawings',
   },
 };
 

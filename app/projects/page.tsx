@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://maja-moger.com/projects',
+    canonical: 'https://www.majamoger.com/projects',
   },
 };
 

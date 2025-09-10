@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { getDrawings, getProjects, getAllPosts } from '@/lib/markdown';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://maja-moger.com';
+  const baseUrl = 'https://www.majamoger.com';
   
   // Static pages
   const staticPages: MetadataRoute.Sitemap = [

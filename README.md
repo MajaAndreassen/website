@@ -114,8 +114,8 @@ npm run build
 
 After deployment, verify:
 
-- [ ] Sitemap accessible at `https://maja-moger.com/sitemap.xml`
-- [ ] Robots.txt accessible at `https://maja-moger.com/robots.txt`
+- [ ] Sitemap accessible at `https://www.majamoger.com/sitemap.xml`
+- [ ] Robots.txt accessible at `https://www.majamoger.com/robots.txt`
 - [ ] No trailing slashes on URLs
 - [ ] Proper redirects working
 - [ ] All pages have meta descriptions
@@ -123,7 +123,7 @@ After deployment, verify:
 - [ ] OpenGraph images resolving correctly
 
 ### Google Search Console
-1. Submit sitemap: `https://maja-moger.com/sitemap.xml`
+1. Submit sitemap: `https://www.majamoger.com/sitemap.xml`
 2. Monitor for crawling errors
 3. Check URL inspection tool for any issues
 
@@ -131,12 +131,12 @@ After deployment, verify:
 
 Important URLs to test after deployment:
 
-- **Sitemap**: https://maja-moger.com/sitemap.xml
-- **Robots**: https://maja-moger.com/robots.txt
-- **Home**: https://maja-moger.com (no trailing slash)
-- **Drawings**: https://maja-moger.com/drawings
-- **Individual Drawing**: https://maja-moger.com/drawings/2025/08/17/sketch-collection-07
-- **Projects**: https://maja-moger.com/projects/lyngen-seaside
+- **Sitemap**: https://www.majamoger.com/sitemap.xml
+- **Robots**: https://www.majamoger.com/robots.txt
+- **Home**: https://www.majamoger.com (no trailing slash)
+- **Drawings**: https://www.majamoger.com/drawings
+- **Individual Drawing**: https://www.majamoger.com/drawings/2025/08/17/sketch-collection-07
+- **Projects**: https://www.majamoger.com/projects/lyngen-seaside
 
 ## 🐛 Troubleshooting
 

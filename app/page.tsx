@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://maja-moger.com',
+    canonical: 'https://www.majamoger.com',
   },
 };
 
@@ -21,8 +21,8 @@ export default function About() {
     name: 'Maja A. Moger',
     jobTitle: 'Creative Developer & Artist',
     description: 'Developer, designer, and creative sharing projects, drawings, thoughts, reviews, and travel stories.',
-    url: 'https://maja-moger.com',
-    image: 'https://maja-moger.com/images/og-image.jpg',
+    url: 'https://www.majamoger.com',
+    image: 'https://www.majamoger.com/images/og-image.jpg',
     sameAs: [
       // Add your social media profiles here when available
       // 'https://twitter.com/yourusername',

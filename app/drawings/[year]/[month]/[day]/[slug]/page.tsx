@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: DrawingPageProps): Promise<Me
   const year = date.getFullYear();
   const month = (date.getMonth() + 1).toString().padStart(2, '0');
   const day = date.getDate().toString().padStart(2, '0');
-  const canonicalUrl = `https://maja-moger.com/drawings/${year}/${month}/${day}/${drawing.slug}`;
+  const canonicalUrl = `https://www.majamoger.com/drawings/${year}/${month}/${day}/${drawing.slug}`;
 
   return {
     title: `${drawing.title}`,
@@ -114,7 +114,7 @@ export default async function DrawingPage({ params }: DrawingPageProps) {
   const year = date.getFullYear();
   const month = (date.getMonth() + 1).toString().padStart(2, '0');
   const day = date.getDate().toString().padStart(2, '0');
-  const canonicalUrl = `https://maja-moger.com/drawings/${year}/${month}/${day}/${drawing.slug}`;
+  const canonicalUrl = `https://www.majamoger.com/drawings/${year}/${month}/${day}/${drawing.slug}`;
 
   // Structured data for SEO
   const jsonLd = {

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://maja-moger.com/micro',
+    canonical: 'https://www.majamoger.com/micro',
   },
 };
 
@@ -24,7 +24,7 @@ export default function Micro() {
     '@type': 'Blog',
     name: 'Micro Posts & Quick Thoughts',
     description: 'Quick thoughts, experiments, and observations by Maja A. Moger',
-    url: 'https://maja-moger.com/micro',
+    url: 'https://www.majamoger.com/micro',
     author: {
       '@type': 'Person',
       name: 'Maja A. Moger',

@@ -1,8 +1,8 @@
 # Sitemap Validation Script
 
 param(
-    [Parameter(Mandatory=$false)]
-    [string]$BaseUrl = "https://maja-moger.com"
+    [Parameter(Mandatory = $false)]
+    [string]$BaseUrl = "https://www.majamoger.com"
 )
 
 Write-Host "🔍 Validating SEO setup for $BaseUrl..." -ForegroundColor Green
@@ -14,11 +14,13 @@ function Test-Url($url, $description) {
         if ($response.StatusCode -eq 200) {
             Write-Host "✅ $description - OK (Status: $($response.StatusCode))" -ForegroundColor Green
             return $true
-        } else {
+        }
+        else {
             Write-Host "⚠️  $description - Warning (Status: $($response.StatusCode))" -ForegroundColor Yellow
             return $false
         }
-    } catch {
+    }
+    catch {
         Write-Host "❌ $description - Error: $($_.Exception.Message)" -ForegroundColor Red
         return $false
     }
@@ -46,13 +48,15 @@ function Test-Sitemap($url) {
         foreach ($page in $importantPages) {
             if ($content -match [regex]::Escape($page)) {
                 Write-Host "✅ Found: $page" -ForegroundColor Green
-            } else {
+            }
+            else {
                 Write-Host "❌ Missing: $page" -ForegroundColor Red
             }
         }
         
         return $true
-    } catch {
+    }
+    catch {
         Write-Host "❌ Could not validate sitemap content: $($_.Exception.Message)" -ForegroundColor Red
         return $false
     }
@@ -63,14 +67,14 @@ Write-Host "Testing core URLs..." -ForegroundColor Yellow
 
 # Test main pages
 $tests = @{
-    "$BaseUrl" = "Homepage"
+    "$BaseUrl"             = "Homepage"
     "$BaseUrl/sitemap.xml" = "Sitemap"
-    "$BaseUrl/robots.txt" = "Robots.txt"
-    "$BaseUrl/drawings" = "Drawings page"
-    "$BaseUrl/projects" = "Projects page"
-    "$BaseUrl/micro" = "Micro page"
-    "$BaseUrl/travel" = "Travel page"
-    "$BaseUrl/product" = "Product page"
+    "$BaseUrl/robots.txt"  = "Robots.txt"
+    "$BaseUrl/drawings"    = "Drawings page"
+    "$BaseUrl/projects"    = "Projects page"
+    "$BaseUrl/micro"       = "Micro page"
+    "$BaseUrl/travel"      = "Travel page"
+    "$BaseUrl/product"     = "Product page"
 }
 
 $passedTests = 0
@@ -92,7 +96,7 @@ Write-Host "Testing redirect handling..." -ForegroundColor Yellow
 
 # Test trailing slash redirects
 $redirectTests = @{
-    "$BaseUrl/" = "Homepage with trailing slash"
+    "$BaseUrl/"          = "Homepage with trailing slash"
     "$BaseUrl/drawings/" = "Drawings with trailing slash"
     "$BaseUrl/projects/" = "Projects with trailing slash"
 }
@@ -102,10 +106,12 @@ foreach ($test in $redirectTests.GetEnumerator()) {
         $response = Invoke-WebRequest -Uri $test.Key -MaximumRedirection 0 -ErrorAction SilentlyContinue
         if ($response.StatusCode -eq 301 -or $response.StatusCode -eq 302) {
             Write-Host "✅ $($test.Value) - Redirect working (Status: $($response.StatusCode))" -ForegroundColor Green
-        } else {
+        }
+        else {
             Write-Host "⚠️  $($test.Value) - No redirect (Status: $($response.StatusCode))" -ForegroundColor Yellow
         }
-    } catch {
+    }
+    catch {
         # This might be expected if the redirect works properly
         Write-Host "ℹ️  $($test.Value) - Redirect behavior unclear" -ForegroundColor Cyan
     }
@@ -118,7 +124,8 @@ Write-Host "Passed: $passedTests/$totalTests core URL tests" -ForegroundColor $(
 
 if ($passedTests -eq $totalTests) {
     Write-Host "🎉 All core tests passed! Your SEO setup looks good." -ForegroundColor Green
-} else {
+}
+else {
     Write-Host "⚠️  Some tests failed. Please check the issues above." -ForegroundColor Yellow
 }
 

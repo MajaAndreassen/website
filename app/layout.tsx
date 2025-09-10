@@ -7,7 +7,7 @@ import Layout from '@/components/Layout';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://maja-moger.com'),
+  metadataBase: new URL('https://www.majamoger.com'),
   title: {
     default: 'Maja A. Moger - Creative Developer & Artist',
     template: '%s | Maja A. Moger',
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://maja-moger.com', // Replace with your actual domain
+    url: 'https://www.majamoger.com', // Replace with your actual domain
     title: 'Maja A. Moger - Creative Developer & Artist',
     description: 'Personal blog and portfolio of Maja A. Moger - developer, designer, and creative. Featuring projects, drawings, thoughts, reviews, and travel stories.',
     siteName: 'Maja A. Moger',
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     images: ['/images/og-image.jpg'], // You'll need to add this image
   },
   alternates: {
-    canonical: 'https://maja-moger.com',
+    canonical: 'https://www.majamoger.com',
   },
   verification: {
     google: 'p1ehQmOmLdED36g4YMN1R8iIAw71ryV3afm8i82W5D4',

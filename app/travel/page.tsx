@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://maja-moger.com/travel',
+    canonical: 'https://www.majamoger.com/travel',
   },
 };
 
