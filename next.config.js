@@ -5,11 +5,7 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   images: { unoptimized: true },
-  trailingSlash: true,
-  // Enable static generation for better SEO
-  experimental: {
-    appDir: true,
-  },
+  trailingSlash: false, // Changed to false for better SEO
   // Ensure all dynamic routes are statically generated
   generateBuildId: async () => {
     return 'static-build-id'

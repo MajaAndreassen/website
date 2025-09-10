@@ -7,6 +7,7 @@ import Layout from '@/components/Layout';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://maja-moger.com'),
   title: {
     default: 'Maja A. Moger - Creative Developer & Artist',
     template: '%s | Maja A. Moger',
